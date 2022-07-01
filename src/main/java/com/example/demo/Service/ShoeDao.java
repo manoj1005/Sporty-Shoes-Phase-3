@@ -1,9 +1,18 @@
-package com.example.demo;
+package com.example.demo.Service;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import com.example.demo.Repository.CasualsRepository;
+import com.example.demo.Repository.RunningRepository;
+import com.example.demo.Repository.ShoeRepository;
+import com.example.demo.Repository.SportsRepository;
+import com.example.demo.entity.Casuals;
+import com.example.demo.entity.Running;
+import com.example.demo.entity.Shoe;
+import com.example.demo.entity.Sports;
 
 @Service
 public class ShoeDao {

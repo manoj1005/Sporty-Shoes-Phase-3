@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -9,11 +9,12 @@ import lombok.Data;
 
 @Data
 @Entity
-public class Admin {
+public class User {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private int adminId;
-	private String name;
-	private String email;
-	private String password;
+	private int id;
+private String firstName;
+private String lastName;
+private String mailId;
+private String password;
 }

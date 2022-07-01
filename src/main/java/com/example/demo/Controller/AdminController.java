@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.Controller;
 
 import java.io.IOException;
 import java.util.List;
@@ -11,6 +11,19 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+
+import com.example.demo.Repository.CasualsRepository;
+import com.example.demo.Repository.RunningRepository;
+import com.example.demo.Repository.SportsRepository;
+import com.example.demo.Service.AdminDao;
+import com.example.demo.Service.ShoeDao;
+import com.example.demo.Service.UserDao;
+import com.example.demo.entity.Admin;
+import com.example.demo.entity.Casuals;
+import com.example.demo.entity.Running;
+import com.example.demo.entity.Shoe;
+import com.example.demo.entity.Sports;
+import com.example.demo.entity.User;
 
 @Controller
 public class AdminController {

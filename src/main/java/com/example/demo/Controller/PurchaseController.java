@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.Controller;
 
 import java.io.IOException;
 import java.util.List;
@@ -11,6 +11,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+
+import com.example.demo.Service.PurchaseDao;
+import com.example.demo.Service.ShoeDao;
+import com.example.demo.Service.UserDao;
+import com.example.demo.entity.Purchase;
+import com.example.demo.entity.Shoe;
+import com.example.demo.entity.User;
 
 @Controller
 public class PurchaseController {
@@ -40,6 +47,7 @@ public class PurchaseController {
 		p.setShoe(s);
 		p.setUser(u);
 		String add=req.getParameter("add");
+		p.setAddress(add);
 		if((add.length()>=5) && (s.getPrice()==price)) {
 		Purchase pp=pdao.insert(p);
 		res.sendRedirect("Confirm.jsp");
